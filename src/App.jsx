@@ -7,10 +7,14 @@ const App = () => {
 	const { newFilter, handleNewFilterValue } = useFormFilter();
 	const { persons, handleNewPersonsValue } = usePersons();
 
+	const texto = import.meta.env.VITE_MI_TEXTO;
+	
+
 	return (
 		<div>
 			<h2>Phonebook</h2>
 			<Filter setNewFilter={ handleNewFilterValue }/>
+			<p>{{ texto }}</p>
 			<PersonForm 
 				newName={ newName } 
 				setNewName={ handleNewNameValue } 

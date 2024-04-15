@@ -1,4 +1,5 @@
-const baseUrl = 'http://localhost:3001/persons';
+const baseUrl = import.meta.env.VITE_ENV;
+
 
 const getAllPersons = () => {
     return fetch(baseUrl)
